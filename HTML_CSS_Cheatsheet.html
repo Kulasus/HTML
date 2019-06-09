@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> <!-- Import jineho fontu -->
+    <style>   /* zde se pise css, lze udelat i externi soubor, komentare v css se zapisuji jinak nez v html */
+        
+        /* CSS selector tagu - nastavi cely tag na urcity styl
+        h2{
+            color: brown;
+        }
+        */
+
+        /* CSS class selector - nastavi urcitou tridu na urcity styl */
+        .cerveny-text{
+            color: red;
+        }       
+
+        /* CSS Id selector - nastaví urcitemu id urcity styl */
+        #id1{
+            color: blueviolet;
+        }
+        
+        /* CSS atribut selector - nastavi urcitemu atributu urcity styl
+        [type="checkbox"]{
+            margin: 10px 20px 30px 10px
+        }
+        */
+
+        /* CSS variables - nastavi urcite promene urcitou hodnotu */ 
+        :root{
+            --red: red;
+        }
+        .random2{
+            color: var(--red, black); /* Druha hodnota je fallback pokud nelze najit prvnio hodnotu*/
+        }
+
+        /* CSS Změna stavu - nastaví jinou hodnotu při jiném stavu objektu */
+        a:hover{
+            color:black;
+        }
+
+        /*CSS TAGY: 
+            font-size: 10px;                        Velikost textu
+            font-family: sans-serif;                Druh fontu
+            font-family: Lobster, monospace;        Druh fontu(import), musí být i náhradní font v případě erroru: NaN;
+            font-weight: bold;                      Tučnost fontu
+            width: 500px;                           Šířka obrázku
+            height: 250px;                          Výška obrázku
+            border-color: red;                      Barva hranice
+            border-width: 5px;                      Šířka hranice
+            border-style: solid;                    Styl hranice
+            border-radius: 25%;                     Zaoblení hranice
+            background-color: blue;                 Barva pozadí
+            padding: 25px;                          Odsazení
+            margin: auto;                           Okraj
+            padding-right: 10px;                    Odsazení z konkrétní strany;
+            margin-top: 15px;                       Okraj z konkrétní strany;
+            padding: 10px 10px 15px 15px;           Odsazení TOP RIGHT BOTTOM LEFT
+            margin: 10px 10px 10px 30px;            Okraj TOP RIGHT BOTTOM 
+            text-align: center/right/left/justify;  Zarovnání textu STŘED/DOPRAVA/DOLEVA/STŘED KROMĚ POSLEDNÍHO ŘÁDKU
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); Stín objektu OFFSETX, BLUR-RADIUS, SPREAD-RADIUS, COLOR,  OFFSETY, BLUR-RADIUS, SPREAD-RADIUS, COLOR
+            opacity: 0.7                            Průhlednost(1 - 0) (Neprůhledné - průhledné)
+            text-transform: lower-case;             lower case
+            text-transform: upper-case;             UPPER CASE
+            text-transform: capitalize;             Capitalized Text
+            text-transform: none;                   Original teXt
+            line-height: 25px;                      Odsazení řádků v textu
+            transform: scale(2);                    Velikost objektu
+            transform: skewX(-32deg)                Zkreslení objektu na X
+            transform: skewY(25deg)                 Zkreslení objektu na Y
+        */
+
+        /*CSS JENDOTKY:
+            in, mm, px                              Absolutní
+            em, rem, %                              Relativní
+        */
+
+        /*CSS PRIORITY SELECTORU:
+            TAG/ATRIBUT -> CLASS -> ID -> INLINE -> IMPORTANT( color: red !important )
+        */
+
+        /*CSS VYBER BAREV:
+            color: blue;                            Název
+            color: #FFFFFF;                         Hex code
+            color: #0FF;                            Zkrácený Hex code
+            color: rgb(255,125,13);                 Rgb code
+            color: hsl(15, 10%, 25%);               HUE,SATURATION,LIGHTNESS code  
+            background: url(https://.......)        Textura             
+
+            KOMPLEMENTÁRNÍ BARVY(opačné barvy)
+                red (#FF0000) and cyan (#00FFFF)
+                green (#00FF00) and magenta (#FF00FF)
+                blue (#0000FF) and yellow (#FFFF00) 
+
+            TERCIÁLNÍ BARVY
+                orange	#FF7D00
+                cyan	#00FFFF
+                raspberry	#FF007D 
+
+            LINEÁRNÍ GRADIENT(přechod)
+
+            background: linear-gradient(90deg, red, yellow)  Přechod mezi barvami(směr, barva1, barva2,...,barvaN)
+
+        */
+
+        /*MEDIA QUERRY - NASTAVI HODNOTY ZA URCITYCH PODMINEK(RESOLUTION...)
+        @media (max-width: 350px)
+        {
+            .....prepsana value...
+        }
+        */
+
+        /*CSS Pozice objektu:
+            position: relative;                     Relativní posun objektu vzhledem k pozici kde by měl být.
+            position: absolut;                      Absolutní pozice v dokumentu vzhledem k obrazovce(hýbe se když scrolluješ).
+            position: fixed;                        Fixní pozice v dokumentu(nehýbe se nikam).
+
+            float:left;                             Objekt bude vlevo
+            float:right;                            Objekt bude vpravo
+
+            z-index: 2;                             Z souřadnice objektu(překrytí..)
+
+            top: 10px;
+            left: 25px;
+        */
+
+        /*CSS Animace:
+            #anim {
+                animation-name: colorful;                   Jméno animace
+                animation-duration: 3s;                     Trvání animace
+                animation-iteration-count: infinite;        Opakování animace
+                animation-timing-function:  easy-in;        Rychlost animace Easy-In, Easy-Out, Linear, Easy, Cubic-bezier(x1, y1, x2, y2)
+            }
+            @keyframes colorful {
+                0% {
+                    background-color: blue;
+                    }
+                100% {
+                    background-color: yellow;
+                    }
+}
+        */
+
+    </style>
+    <head>  <!-- informace o dokumentu jsou v head -->
+        <title>HTML&CSS Cheatsheet</title>  <!-- title nejde videt -->
+    </head>
+    <body> <!-- dokument je v body -->
+        <main>  <!-- nejdulezitejsi content -->
+            <div>   <!-- div tag rozdeluje obsah na odstavce/bloky <div> - groups content <section> - groups related content <article> - groups independent, self-contained content-->
+                <!--Nadpisy  -> musí přesně odpovídat podle důležitosti!  -->
+                <h1>Nadpis urovne cislo 1</h1>
+                <h2>Nadpis urovne cislo 2</h2>
+                <h3>Nadpis urovne cislo 3</h3>
+                <h4>Nadpis urovne cislo 4</h4>
+                <h5>Nadpis urovne cislo 5</h5>
+                <h6>Nadpis urovne cislo 6</h6>
+            
+                <!--Text -->
+                <p>Text vždy <strong>zapisovat</strong> do tagu p!</p> <!-- strong tag tučné písmo-->
+                <p>Další <u>upravený</u> <em>text</em></p>
+                <p><s>Neplatný text</s></p>
+
+                <!--Enter-->
+                <br>
+            </div>
+
+            <div>
+                <!--Obrazek vždy s alt tagem pro SR-->
+                <img src="jungle.jpg" alt="A picture of jungle." id="prvni_obrazek">
+            </div>
+
+            <div>
+                <!--Odkazy  -->
+                <a href="https://www.google.com/">Odkaz na google.</a> <!--Externi odkaz-->
+                <a href="#prvni_obrazek">Odkaz na prvni obrazek.</a> <!--Interni odkaz-->
+                <a href="#">Mrtvy odkaz.</a> <!--Mrtvy odkaz-->
+            </div>
+
+            <div>
+                <!--Seznamy-->
+                    <!--Nečíslovaný seznam-->
+                    <ul>
+                        <li>Random věc</li>
+                        <li>Další random věc</li>
+                    </ul>
+                    <!--Číslovaný seznam-->
+                    <ol>
+                        <li>První věc</li>
+                        <li>Druhá věc</li>
+                    </ol>
+            </div>
+
+            <div>
+                <!--Input-->
+                <!--Pomoci form lze dostat data na server?-->
+                <form action="submit"></form>
+                
+                <!-- Text field -->
+                <input type="text" placeholder="Toto je text v poli" required> <!--Textové pole s tagem required -> povinné vyplnit-->
+                <button type="submit">Submit</button> <!--Potvrzující tlačítko--> 
+                <br>
+
+                <!-- Radiobutton -->
+                <label for="Radio1">            <!--Radiobuttony, labely by měli odpovídat id radiobuttonu pro SR-->
+                    <input type="radio" id="Radio1" name="RadioDohromady" checked>Radio1  <!--name tag udava ze lze vybrat pouze jeden rb z rodiny-->
+                </label>                                                                  <!-- checked udava defaultni stav-->
+                <label for="Radio2">
+                    <input type="radio" id="Radio2" name="RadioDohromady">Radio2
+                </label>
+                <br>
+
+                <label for="Radio3">            <!-- Rb bez name tagu lze vybrat oba naraz-->
+                    <input type="radio" id="Radio3">Radio3
+                </label>
+                <label for="Radio4">
+                    <input type="radio" id="Radio4">Radio4
+                </label>
+                <br>
+            
+                <!-- Checkbox -->
+                <label for="Check1">            <!--labely by měli odpovídat id checkboxu pro SR-->
+                    <input type="checkbox" id="Check1" name="CheckDohromady" checked>Check1 <!-- U checkboxu je jedno jestli maji name tag-->
+                </label>                                                                    <!-- checked udava defaultni stav-->
+                <label for="Check2">
+                    <input type="checkbox" id="Check2" name="CheckDohromady">Check2
+                </label>
+                <br>
+                </form>
+            </div>
+
+            <hr> <!-- čára -->
+            
+
+
+
+
+
+
+            <!-- Zde testuju css -->
+            <div>
+                <!-- CSS INLINE -->
+                <p style="color: magenta">Css primo v tagu</p>
+
+                <!-- CSS podle tridy -->
+                <p class="cerveny-text">Css podle tridy</p>
+                <p class="random2">Dalsi CSS podle tridy</p>
+                
+
+            </div>
+
+
+        </main>
+</body>
+</html>
