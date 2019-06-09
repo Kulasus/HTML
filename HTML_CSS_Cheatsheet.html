@@ -137,7 +137,27 @@
                 100% {
                     background-color: yellow;
                     }
-}
+            }    
+        */
+
+        /*CSS Flexbox:
+            display: flex;                                  Flexibilní pozicování
+            flex-direction: row-reverse;                    Směr řazení objektů vzhledem k parent objektu při změně rozlišení
+                                                            -> row, column, row-reverse, column-reverse
+
+            justify-content: flex-end/flex-start/center/space-between/space-around;
+                                                            -> Pozice objektů vzhledem k parentovi při změně rozlišení
+            align-items: flex-end/flex-start/center/stretch/basleine;
+                                                            ->alternativa k justify-
+            align-self: -||-                                ->pouze na jeden konkrétní objekt
+            
+            flex-wrap: nowrap/wrap/wrap-reverse;            Objekty co se nevlezou řadí do pod sebe
+            flex-shrink: NUM;                               Pokud je container malý, zmenšuje objekty v něm, číslo udává poměr.
+            flex-grow: NUM;                                 Opak flex-shrink;
+            flex-basis: 15em;                               Udává defaultní hodnotu kterou mají objekty před grow/shrink.
+            flex: 1 2 150px;                                Udává dohromady hodnoty GROW SHRINK BASIS
+
+            order: 2;                                        Pořadí ve kterém se objekty v parentovi řadí.
         */
 
     </style>
